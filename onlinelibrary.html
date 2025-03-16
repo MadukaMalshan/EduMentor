@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduMentor Library</title>
+  <link rel="stylesheet" href="css/library.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <div class="square"></div>
+      <h4>EduMentor</h4>
+    </div>
+    <div class="nav-links" style="float: right;">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chat.html">Ai Assistant</a></li>
+        <li><a href="onlinelibrary.html">Online Library</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="library-container" style="margin-top: 60px;">
+    <header class="library-header">
+      <h1>EduMentor Library</h1>
+    </header>
+
+    <div class="search-bar" style="margin-top: 40px;">
+      <input id="searchInput" type="text" placeholder="Search for books...">
+      <button id="searchButton">Search</button>
+    </div>
+
+    <div class="suggested-books">
+      <h2>Suggested Books</h2>
+      <div id="suggestedBookGrid" class="book-grid"></div>
+    </div>
+
+    <div id="bookGrid" class="book-grid"></div>
+  </div>
+
+  <script src="library.js"></script>
+</body>
+</html>

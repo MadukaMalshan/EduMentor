@@ -1,0 +1,251 @@
+/* General styles for the chat application */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #D4F1F4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.msger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 64px); /* Adjust height to account for the navigation bar */
+  width: 90%;
+  max-width: 600px;
+  background: #D4F1F4;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 80px; /* Increase margin to move the chatbox further down */
+}
+
+/* Header styles */
+.msger-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #75E6DA;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.msger-header-title {
+  text-align: center;
+}
+
+.opt-align select {
+  margin-top: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff2e1;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.msger-header-options span {
+  cursor: pointer;
+  color: #666;
+}
+
+/* Chat area styles */
+.msger-chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background: #D4F1F4;
+}
+
+.msg {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.left-msg {
+  justify-content: flex-start;
+}
+
+.right-msg {
+  justify-content: flex-end;
+}
+
+.msg-bubble {
+  max-width: 75%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background: #75E6DA;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.right-msg .msg-bubble {
+  background: #189AB4;
+}
+
+/* Adding unique colors for bubbles */
+.left-msg .msg-bubble:nth-child(1n) {
+  background-color: #ff9999;
+}
+
+.left-msg .msg-bubble:nth-child(2n) {
+  background-color: #ffcc66;
+}
+
+.right-msg .msg-bubble:nth-child(1n) {
+  background-color: #99ccff;
+}
+
+.right-msg .msg-bubble:nth-child(2n) {
+  background-color: #66ff99;
+}
+
+.msg-info {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85em;
+  color: #666;
+}
+
+.msg-info-name {
+  font-weight: bold;
+}
+
+/* Input area styles */
+.msger-inputarea {
+  display: flex;
+  padding: 10px;
+  background: #75E6DA;
+  border-top: 1px solid #ddd;
+}
+
+.msger-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  outline: none;
+  background: #fff2e1;
+  color: #000;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.msger-input::placeholder {
+  color: #000;
+}
+
+.msger-send-btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #05445E;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.msger-send-btn:hover {
+  background: #189AB4;
+}
+
+/* Scrollbar styles */
+.msger-chat::-webkit-scrollbar {
+  width: 8px;
+}
+
+.msger-chat::-webkit-scrollbar-thumb {
+  background: #ffcc99;
+  border-radius: 10px;
+}
+
+.msger-chat::-webkit-scrollbar-thumb:hover {
+  background: #ff9966;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #D4F1F4;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fix the navbar at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure the navbar is above other content */
+  display: flex;
+  justify-content: space-between; /* Add this line to space out logo and nav-links */
+  align-items: center; /* Center align items vertically */
+}
+
+.nav-links {
+  margin-right: 5px; /* Add margin to the right side */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+/*.navbar ul li {
+  margin: 0 15px;
+}*/
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #189AB4;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  position: relative; /* Ensure proper positioning for the square and text */
+}
+
+.navbar .logo .square {
+  background-color: #23bdee; /* Adjust color if needed */
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  position: absolute;
+  margin-left: 40px; /* Align square to the left */
+}
+
+.navbar .logo h4 {
+  position: relative;
+  margin-left: 50px; /* Adjust spacing to align with the square */
+  font-size: 1.2rem; /* Adjust font size for better visibility */
+  font-weight: bold;
+  color: #333; /* Ensure text color matches the design */
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}

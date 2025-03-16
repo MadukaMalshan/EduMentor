@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #05445E;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section.about {
+    padding: 2rem;
+    text-align: center;
+}
+
+section.team {
+    padding: 2rem;
+    background-color: #D4F1F4;
+}
+
+.team-member {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.team-member h3 {
+    margin: 0.5rem 0;
+    color: #189AB4;
+}
+
+.team-member p {
+    margin: 0;
+    font-style: italic;
+}

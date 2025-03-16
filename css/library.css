@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #D4F1F4;
+    padding-top: 60px; /* Adjust padding to prevent content from being hidden behind the navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensure content is stacked vertically */
+  }
+  
+  .library-container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+  }
+  
+  .library-header {
+    background-color: #75E6DA;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .library-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-bar button {
+    padding: 10px 20px;
+    background-color: #05445E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-bar button:hover {
+    background-color: #189AB4;
+  }
+  
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Change to display four cards in a row */
+    gap: 20px;
+  }
+  
+  .book-card {
+    background-color: #D4F1F4;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .book-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .book-card p {
+    margin: 5px 0;
+    color: #666;
+  }
+
+  .btn-readbook{
+    padding: 10px 15px;
+    background-color: #ff9966;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+
+    .btn-readbook:hover {
+    background-color: #3399ff;
+  }
+
+.navbar {
+  width: 100%;
+  background-color: #D4F1F4;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fix the navbar at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure the navbar is above other content */
+  display: flex;
+  justify-content: space-between; /* Add this line to space out logo and nav-links */
+  align-items: center; /* Center align items vertically */
+}
+
+.nav-links {
+  margin-right: 20px; /* Add margin to the right side */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #189AB4;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar .logo{
+  display: flex;
+  align-items: center;
+}
+.navbar .logo .square{
+  background-color: #23bdee;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  position: absolute;
+  margin-left: 16px;
+}
+.navbar .logo h4{
+  position: relative;
+  margin-left: 24px;
+  letter-spacing: 2px;
+}
+
+.suggested-books {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.suggested-books h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai Assistant</title>
+    <link rel="stylesheet" href="css/chat.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">
+        <div class="square"></div>
+        <h4>EduMentor</h4>
+      </div>
+      <div class="nav-links" style="float: right;">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chat.html">Ai Assistant</a></li>
+          <li><a href="onlinelibrary.html">Online Library</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="msger">
+        <header class="msger-header">
+          <div class="msger-header-title">
+            <h5>EduMentor</h5>
+            <br>
+
+            <div class="opt-align"><select id="person" name="person_list">
+                <option value="Gemini">Gemini</option>
+                <option value="Ruvindu">Ruvindu</option>
+                <option value="Sajith">Sajith</option>
+            </select></div>
+
+
+          </div>
+
+
+          <div class="msger-header-options">
+            <span><i class="fas fa-cog"></i></span>
+          </div>
+        </header>
+      
+        <div class="msger-chat">
+          <div class="msg left-msg">
+
+      
+            <div class="msg-bubble">
+              <div class="msg-info">
+                <div class="msg-info-name">Sender</div>
+              </div>
+      
+              <div class="msg-text">
+                Ask anything you want to know !
+              </div>
+            </div>
+          </div>
+      
+          <div class="msg right-msg">
+      
+            <div class="msg-bubble">
+              <div class="msg-info">
+                <div class="msg-info-name">Me</div>
+              </div>
+      
+              <div class="msg-text">
+                Your Massages will appear here!
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <form class="msger-inputarea">
+          <div class="even-form"><input type="text" class="msger-input" placeholder="Enter your message...">
+          <button type="submit" class="msger-send-btn">Send</button></div>
+        </form>
+    </section>
+    
+    <script src="chat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
